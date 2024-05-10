@@ -6,9 +6,9 @@ import {
   PercentIcon,
   ShoppingCartIcon,
 } from 'lucide-react'
-import { Button } from './button'
-import { Card } from './card'
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './sheet'
+import { Button } from './ui/button'
+import { Card } from './ui/card'
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from './ui/sheet'
 
 const Header = () => {
   return (

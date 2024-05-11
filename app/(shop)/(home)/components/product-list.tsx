@@ -10,8 +10,8 @@ interface ProductListProps {
 
 const ProductsList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div>
-      {products.map((product) => (
+    <div className="flex w-full gap-4 overflow-x-auto px-5">
+      {products.slice(0, 6).map((product) => (
         <ProductItem
           key={product.id}
           product={computeProductTotalPrice(product)}

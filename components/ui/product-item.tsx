@@ -9,14 +9,14 @@ interface ProductItemProps {
 
 const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
   return (
-    <div className="flex max-w-[156px] flex-col gap-4">
-      <div className="relative flex h-[170px] w-[156px] items-center justify-center rounded-lg bg-accent">
+    <div className="flex max-w-[200px] flex-col gap-4">
+      <div className="relative flex h-[170px] w-[200px] items-center justify-center rounded-lg bg-accent">
         <Image
           src={product.imageUrls[0]}
           height={0}
           width={0}
           sizes="100vw"
-          className="h-auto max-h-[70%] w-auto max-w-[80%]"
+          className="h-auto max-h-[75%] w-auto max-w-[80%]"
           style={{
             objectFit: 'contain',
           }}
@@ -24,8 +24,9 @@ const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
         />
 
         {product.discountPercentage > 0 && (
-          <div className="absolute left-3 top-3 px-2 py-[2px] ">
-            <ArrowDownIcon size={14} /> {product.discountPercentage}%
+          <div className="absolute left-3 top-3 px-2 py-[2px] bg-primary flex item-center rounded-lg">
+            <ArrowDownIcon size={14} />
+            <span>{product.discountPercentage}%</span>
           </div>
         )}
       </div>

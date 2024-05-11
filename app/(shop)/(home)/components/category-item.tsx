@@ -24,7 +24,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
   }
 
   return (
-    <div>
+    <div className="flex items-center justify-center gap-2 rounded-lg py-3 px-5 border-2 border-muted">
       {categoryIcon[category.slug as keyof typeof categoryIcon]}
       <span className="text-xs font-bold">{category.name}</span>
     </div>
